@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>async</title>
+  </head>
+  <body>
+
+    <button id="start" onclick="start()">start</button>
+    <button id="stop" onclick="stop()">stop</button>
+    <script>
+      const newvar = function (str) {
+        console.log(str,Date.now());
+      };
+      function start(){
+        // const newid = setInterval(newvar, 1000, "hello");
+        const newid= setInterval(()=>newvar('hello'),1000);
+        
+      }
+
+     function stnewidop(){
+        clearInterval(newvar);
+     }
+
+     
+    </script>
+  </body>
+</html>
